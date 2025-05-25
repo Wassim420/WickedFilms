@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WickedFilms</title>
+  <link rel="stylesheet" href="design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  <link rel="icon" type="image/x-icon" href="favicon.ico" alt>
+</head>
+<body>
+<div id="header">
+  <h1 id="top">WickedFilms</h1>
+  
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search movies...">
+    <select id="categorySelect">
+      <option value="all">All Categories</option>
+      <option value="New Releases">New Releases</option>
+      <option value="Best of 2024">Best of 2024</option>
+      <option value="Classics">Classics</option>
+      <option value="Oscar Winners">Oscar Winners</option>
+    </select>
+  </div>
+</div>
+
+  <!-- Categories -->
+  <div id="movieContainer">
+    <!-- New Releases -->
+    <div class="category" data-category="New Releases">
+      <h2>New Releases</h2>
+      <div class="movie-library">
+        <div class="movie"><img src="posters\newr\mitfr.jpeg" alt="mission impossible"><h3>Mission Impossible 6</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\f1.jpg" alt="F1: The Movie"><h3>F1: The Movie</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\sinners.jpeg" alt="Sinners"><h3>Sinners</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\ballerina.jpg" alt="Ballerina"><h3>Ballerina</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\avatar.jpg" alt="Avatar: The Seed Bearer"><h3>Avatar: The Seed Bearer</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\novocaine.jpg" alt="Novocaine"><h3>Novocaine</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\thunderbolts.jpeg" alt="Thunderbolts"><h3>Thunderbolts*</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\minecraft.webp" alt="Minecraft"><h3>Minecraft</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\accountant2.jpg" alt="The accountant 2"><h3>The accountant 2</h3><p>2025</p></div>
+        <div class="movie"><img src="posters\newr\17.jpg" alt="One of Them Days"><h3>Mickey 17</h3><p>2025</p></div>
+      </div>
+    </div>
+
+    <!-- Best of 2024 -->
+    <div class="category" data-category="Best of 2024">
+      <h2>Best of 2024</h2>
+      <div class="movie-library">
+        <div class="movie"><img src="posters\2024\alien.jpg" alt="Alien"><h3>Alien</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\bb.jpg" alt="Bad Boys"><h3>Bad Boys:ride or die</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\conclave.webp" alt="Conclave"><h3>Conclave</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\twr.jpeg" alt="The wild robot"><h3>The wild robot</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\dp.jpeg" alt="Deadpool and Wolverine"><h3>Deadpool and Wolverine</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\furiosa.jpeg" alt="Furiosa"><h3>Furiosa</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\nosferatu.jpg" alt="Nosferatu"><h3>Nosferatu</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\tfg.jpg" alt="The Fall Guy"><h3>The Fall Guy</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\dune.jpg" alt="Dune part two"><h3>Dune part two</h3><p>2024</p></div>
+        <div class="movie"><img src="posters\2024\wicked.jpg" alt="Wicked"><h3>Wicked</h3><p>2024</p></div>
+      </div>
+    </div>
+
+    <!-- Classics -->
+    <div class="category" data-category="Classics">
+      <h2>Classics</h2>
+      <div class="movie-library">
+        <div class="movie"><img src="posters/classics/bourne.jpg" alt="bourne"><h3>The Bourne Identity</h3><p>2002</p></div>
+        <div class="movie"><img src="posters/classics/casa.jpg" alt="Casablanca"><h3>Casablanca</h3><p>1942</p></div>
+        <div class="movie"><img src="posters/classics/jp3.jpg" alt="Dr. No"><h3>Jurassic Park III</h3><p>2001</p></div>
+        <div class="movie"><img src="posters/classics/gbu.webp" alt="The Good, the Bad and the Ugly"><h3>The Good, the Bad and the Ugly</h3><p>1966</p></div>
+        <div class="movie"><img src="posters/classics/ape.jpg" alt="Planet of the Apes"><h3>Planet of the Apes</h3><p>1968</p></div>
+        <div class="movie"><img src="posters/classics/psycho.avif" alt="Psycho"><h3>Psycho</h3><p>1960</p></div>
+        <div class="movie"><img src="posters/classics/boyz.jpg" alt="Boyz n The Hood"><h3>Boyz n The Hood</h3><p>1991</p></div>
+        <div class="movie"><img src="posters/classics/snatch.webp" alt="Snatch"><h3>Snatch</h3><p>2000</p></div>
+        <div class="movie"><img src="posters/classics/good.jpg" alt="Goodfellas"><h3>Goodfellas</h3><p>1990</p></div>
+        <div class="movie"><img src="posters/classics/gofather.jpg" alt="The godfather"><h3>The godfather</h3><p>1972</p></div>
+      </div>
+    </div>
+<div class="category" data-category="Oscar Winners">
+      <h2>Oscar Winners</h2>
+      <div class="movie-library">
+        <div class="movie"><img src="posters/oscar/para.jpg" alt="para"><h3>Parasite</h3><p>2019</p></div>
+        <div class="movie"><img src="posters/oscar/12.webp" alt="12"><h3>12 Years A Slave</h3><p>2013</p></div>
+        <div class="movie"><img src="posters/oscar/argo.jpeg" alt="Argo"><h3>Argo</h3><p>2012</p></div>
+        <div class="movie"><img src="posters/oscar/opp.jpg" alt="Opp"><h3>Oppenheimre</h3><p>2023</p></div>
+        <div class="movie"><img src="posters/oscar/top.jpg" alt="Top Gun"><h3>Top Gun: Maverick</h3><p>2022</p></div>
+        <div class="movie"><img src="posters/oscar/007.jpg" alt="No Time To Die"><h3>No Time To Die</h3><p>2021</p></div>
+        <div class="movie"><img src="posters/oscar/no.jpg" alt="NCFOM"><h3>No Country for Old Men</h3><p>2007</p></div>
+        <div class="movie"><img src="posters/oscar/depart.jpg" alt="departed"><h3>The Departed</h3><p>2006</p></div>
+        <div class="movie"><img src="posters/oscar/lotr.jpg" alt="LOTR"><h3>Lord Of The Ring</h3><p>2003</p></div>
+        <div class="movie"><img src="posters/oscar/brave.jpg" alt="brave"><h3>Braveheart</h3><p>1995</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="back-home">
+    <a href="index.html" class="home-button">Home</a>
+  </div>
+
+  
+<div class="top-right">
+  <button onclick="location.href='signin.html'">Sign In</button>
+  <button onclick="location.href='signup.html'">Sign Up</button>
+</div>
+
+<div class="bottom-center">
+  <button onclick="location.href='sugg.html'">Suggestions</button>
+  <button onclick="location.href='review.html'">Reviews</button>
+</div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const movies = document.querySelectorAll(".movie");
+      movies.forEach((movie, i) => {
+        movie.style.animationDelay = `${i * 100}ms`;
+      });
+    });
+  </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const categorySelect = document.getElementById("categorySelect");
+  const allCategories = document.querySelectorAll(".category");
+
+  function filterMovies() {
+    const query = searchInput.value.toLowerCase();
+    const selectedCategory = categorySelect.value;
+
+    allCategories.forEach(category => {
+      const categoryName = category.getAttribute("data-category");
+
+      // Show or hide entire category based on dropdown
+      const categoryMatches = selectedCategory === "all" || selectedCategory === categoryName;
+      category.style.display = categoryMatches ? "block" : "none";
+
+      if (categoryMatches) {
+        const movies = category.querySelectorAll(".movie");
+        let hasVisibleMovie = false;
+
+        movies.forEach(movie => {
+          const title = movie.querySelector("h3").textContent.toLowerCase();
+          const matchesSearch = title.includes(query);
+          movie.style.display = matchesSearch ? "block" : "none";
+          if (matchesSearch) hasVisibleMovie = true;
+        });
+
+        // Hide category if no movie matches search query
+        category.style.display = hasVisibleMovie ? "block" : "none";
+      }
+    });
+  }
+
+  searchInput.addEventListener("input", filterMovies);
+  categorySelect.addEventListener("change", filterMovies);
+  });
+</script>
+
+<footer class="glass-footer">
+    <p>&copy; 2025 WickedFilms. All rights reserved.</p>
+  </footer>
+

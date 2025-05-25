@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Reviews - WickedFilms</title>
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="review.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  <link rel="icon" type="image/x-icon" href="favicon.ico" alt>
+</head>
+<body>
+
+<div class="reviews-container">
+  <h2>User Movie Reviews</h2>
+  <form id="reviewForm">
+    <input type="text" id="movieTitle" placeholder="Movie Title" required />
+    <textarea id="reviewText" placeholder="Write your review..." required></textarea>
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <div class="review-list" id="reviewList">
+    <p class="no-reviews">No reviews yet. Be the first to add one!</p>
+  </div>
+</div>
+
+<script>
+  const reviewForm = document.getElementById('reviewForm');
+  const reviewList = document.getElementById('reviewList');
+  const movieTitleInput = document.getElementById('movieTitle');
+  const reviewTextInput = document.getElementById('reviewText');
+
+  // Load reviews from localStorage or start empty
+  let reviews = JSON.parse(localStorage.getItem('movieReviews')) || [];
+
+  function displayReviews() {
+    reviewList.innerHTML = '';
+    if (reviews.length === 0) {
+      reviewList.innerHTML = '<p class="no-reviews">No reviews yet. Be the first to add one!</p>';
+      return;
+    }
+
+    reviews.forEach(({ title, text }) => {
+      const reviewItem = document.createElement('div');
+      reviewItem.classList.add('review-item');
+
+      reviewItem.innerHTML = `
+        <h3>${title}</h3>
+        <p>${text}</p>
+      `;
+      reviewList.appendChild(reviewItem);
+    });
+  }
+
+  reviewForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const title = movieTitleInput.value.trim();
+    const text = reviewTextInput.value.trim();
+
+    if (!title || !text) return;
+
+    // Add new review and save to localStorage
+    reviews.unshift({ title, text });
+    localStorage.setItem('movieReviews', JSON.stringify(reviews));
+
+    // Reset form and update display
+    reviewForm.reset();
+    displayReviews();
+  });
+
+  // Show existing reviews on page load
+  displayReviews();
+</script>
+
+</body>
+</html>
